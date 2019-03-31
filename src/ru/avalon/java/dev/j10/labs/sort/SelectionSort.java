@@ -21,5 +21,20 @@ public class SelectionSort implements Sort {
         /*
          * TODO(Студент): Реализовать метод sort класса SelectionSort
          */
+        int jMem = 0;
+        for (int i = 0; i < array.length - 1; i++) {
+            int min = array[i];
+            jMem = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (min > array[j]) {
+                    min = array[j];
+                    jMem = j;
+                } 
+                if (j == array.length - 1) {
+                    array[jMem] = array[i];
+                    array[i] = min;
+                }
+            }
+        }
     }
 }
