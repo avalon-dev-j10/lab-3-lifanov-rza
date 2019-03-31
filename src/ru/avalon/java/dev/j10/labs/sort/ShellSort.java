@@ -21,8 +21,22 @@ public class ShellSort implements Sort {
      * {@inheritDoc}
      */
     public void sort(int[] array) {
+        int increment = array.length / 2;
+        for (int i = 0; i <= increment; i++) {
+            innerSort(array, i, increment);
+            
+            
+        }
         /*
          * TODO(Студент): Реализовать метод sort класса ShellSort
          */
     }
+    private void innerSort(int[] arr, int index, int increment) {
+        for (int i = index; i < arr.length; i += increment) {
+            int min = arr[i];
+            
+            
+        }
+
+}
 }

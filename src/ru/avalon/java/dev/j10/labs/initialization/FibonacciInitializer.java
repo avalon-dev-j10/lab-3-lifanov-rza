@@ -30,5 +30,11 @@ public class FibonacciInitializer implements Initializer {
         /*
          * TODO(Студент): Реализовать метод initialize класса FibonacciInitializer
          */
+        array[0] = 0;
+        int fibNumber = 1;
+        for (int i = 1; i < array.length; i++) {
+            array[i] = fibNumber;
+            fibNumber += array[i - 1];
+        }
     }
 }
